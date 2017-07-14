@@ -2,7 +2,7 @@
 <h3><u>Author</u></h3>
 <p>Gabrijela Gavric</p>
 <h3><u>Link to github</u></h3>
-<p>INSERT---</p>
+<p>https://github.com/gabigavric/pingpongproject</p>
 <h3>Specifications<h3>
 <p>It can count up to the provided number.</p>
 <ul>
