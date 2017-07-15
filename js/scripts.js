@@ -1,32 +1,23 @@
+function pingPong(number) {
+  if (number % 15 == 0) {
+    return ("pingpong");
+  } else if (number % 5 == 0) {
+    return ("pong");
+  } else if (number % 3 == 0) {
+    return ("ping");
+  } else {
+    return number;
+  }
+}
+
+
 $(document).ready(function() {
 
   $("form").submit(function(event) {
-
-    var theirNumber = $('input#number')
     var value = $("input#number").val();
-
-    console.info("user number is: " + value);
-
     for (i = 1; i <= value; i++) {
-      console.info(i);
-      if (i % 15 == 0) {
-        $("ul#output").append($("<li>").text("pingpong"));
-        console.info(i + "pingping");
-      } else if (i % 5 == 0) {
-        $("ul#output").append($("<li>").text("pong"));
-        console.info(i + "pong");
-      } else if (i % 3 == 0) {
-        $("ul#output").append($("<li>").text("ping"));
-        console.info(i + "ping");
-      } else {
-        $("ul#output").append($("<li>").text(i))
-      }
-
-    }
-
+      $("ul#output").append($("<li>").text(pingPong(i)));
+    };
     event.preventDefault();
   });
-
-
-
 });
